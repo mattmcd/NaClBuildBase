@@ -21,7 +21,7 @@ RUN dpkg --add-architecture i386 && apt-get update && apt-get -yqq install unzip
 RUN curl -O https://storage.googleapis.com/nativeclient-mirror/nacl/nacl_sdk/nacl_sdk.zip
 RUN unzip nacl_sdk.zip 
 
-RUN cd nacl_sdk/ && ./naclsdk update
+RUN cd nacl_sdk/ && ./naclsdk update -vv pepper_49
 
 # Install depo-tools needed to install naclports
 RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
